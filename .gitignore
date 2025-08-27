@@ -45,9 +45,9 @@ next-env.d.ts
 
 # 
 api
-Authentication
+
 ui
-Context
+
 dashboard
 login
 products
