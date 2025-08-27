@@ -2,19 +2,19 @@
 
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
-import { Badge } from "../components/ui/badge";
+import { Input } from "../Components/ui/input";
+import { Button } from "../Components/ui/button";
+import { Badge } from "../Components/ui/badge";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select";
+} from "../Components/ui/select";
 import { Search, Grid, List } from "lucide-react";
 import ProductCard from "../Components/Home/HomeComponents/ProductCard";
-import { Skeleton } from "../components/ui/skeleton";
+import { Skeleton } from "../Components/ui/skeleton";
 
 export default function Products() {
   const [search, setSearch] = useState("");

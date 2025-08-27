@@ -3,11 +3,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { Button } from "../../components/ui/button";
-import { Badge } from "../../components/ui/badge";
-import { Card } from "../../components/ui/card";
+import { Button } from "../../Components/ui/button";
+import { Badge } from "../../Components/ui/badge";
+import { Card } from "../../Components/ui/card";
 import { ArrowLeft, ShoppingCart, Heart, Share, Star } from "lucide-react";
-import { Skeleton } from "../../components/ui/skeleton";
+import { Skeleton } from "../../Components/ui/skeleton";
 
 export default function ProductDetail() {
   const { id } = useParams();

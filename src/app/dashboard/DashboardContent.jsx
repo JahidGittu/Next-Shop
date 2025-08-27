@@ -6,9 +6,9 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../Context/AuthContext/AuthContext";
 import { Button } from "../Components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
-import { Textarea } from "../components/ui/textarea";
+import { Input } from "../Components/ui/input";
+import { Label } from "../Components/ui/label";
+import { Textarea } from "../Components/ui/textarea";
 import {
   Card,
   CardDescription,
@@ -21,7 +21,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select";
+} from "../Components/ui/select";
 import { Plus, Package, TrendingUp, Users, DollarSign } from "lucide-react";
 import { useToast } from "../../hooks/use-toast";
 import ProductCard from "../Components/Home/HomeComponents/ProductCard";
