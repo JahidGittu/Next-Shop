@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/Components/ui/button.jsx", "src/app/Components/ui/skeleton.jsx", "src/app/Components/ui/input.jsx", "src/app/Components/ui/card.jsx", "src/app/Components/ui/avatar.jsx", "src/app/Components/ui/badge.jsx", "src/app/Components/ui/toaster.jsx", "src/app/Components/ui/sonner.jsx", "src/app/Components/ui/tooltip.jsx", "src/app/Components/ui/toast.jsx", "src/app/Components/ui/tabs.jsx", "src/app/Components/ui/label.jsx", "src/app/Components/ui/accordion.jsx", "src/app/Components/ui/alert-dialog.jsx", "src/app/Components/ui/alert.কsx", "src/app/Components/ui/aspect-ratio.jsx", "src/app/Components/ui/breadcrumb.jsx", "src/app/Components/ui/calendar.jsx", "src/app/Components/ui/carousel.jsx", "src/app/Components/ui/chart.jsx", "src/app/Components/ui/checkbox.jsx", "src/app/Components/ui/collapsible.jsx", "src/app/Components/ui/command.jsx", "src/app/Components/ui/context-menu.jsx", "src/app/Components/ui/dialog.jsx", "src/app/Components/ui/drawer.jsx", "src/app/Components/ui/dropdown-menu.jsx", "src/app/Components/ui/hover-card.jsx", "src/app/Components/ui/form.jsx", "src/app/Components/ui/input-otp.jsx", "src/app/Components/ui/menubar.jsx", "src/app/Components/ui/navigation-menu.jsx", "src/app/Components/ui/pagination.jsx", "src/app/Components/ui/popover.jsx", "src/app/Components/ui/progress.jsx", "src/app/Components/ui/radio-group.jsx", "src/app/Components/ui/resizable.jsx", "src/app/Components/ui/scroll-area.jsx", "src/app/Components/ui/select.jsx", "src/app/Components/ui/separator.jsx", "src/app/Components/ui/sheet.jsx", "src/app/Components/ui/slider.jsx", "src/app/Components/ui/switch.jsx", "src/app/Components/ui/table.jsx", "src/app/Components/ui/textarea.jsx", "src/app/Components/ui/toggle.jsx", "src/app/Components/ui/toggle-group.jsx", "src/app/Components/ui/sidebar.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

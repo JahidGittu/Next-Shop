@@ -1,26 +1,141 @@
+/* ---------------------------------- */
+/* ✅ Google Fonts                   */
+/* ---------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ---------------------------------- */
+/* ✅ Tailwind + DaisyUI              */
+/* ---------------------------------- */
 @import "tailwindcss";
+@plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------- */
+/* ✅ Light Theme (mytheme)           */
+/* ---------------------------------- */
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersDark: false;
+  color-scheme: light;
+
+  --color-base-100: #F0F2F5; 
+  --color-base-200: #FFFFFF; 
+  --color-base-300: #EAF7FB;
+  --color-base-content: #1A1A1A;
+
+  --color-primary: #FE8B0C;
+  --color-primary-content: #FFFFFF;
+
+  --color-secondary: #66B2FF;
+  --color-secondary-content: #1A1A1A;
+
+  --color-accent: #66CC99;
+  --color-accent-content: #FFFFFF;
+
+  --color-neutral: #7A7A7A;
+  --color-neutral-content: #FFFFFF;
+
+  --color-info: #2094F3;
+  --color-success: #22C55E;
+  --color-warning: #FACC15;
+  --color-error: #EF4444;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+
+  --card-bg: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---------------------------------- */
+/* ✅ Dark Theme (mytheme-dark)       */
+/* ---------------------------------- */
+@plugin "daisyui/theme" {
+  name: "mytheme-dark";
+  color-scheme: dark;
+
+  --color-base-100: #141A21; 
+  --color-base-200: #1C252E; 
+  --color-base-300: #2C3138;
+  --color-base-content: #F8FAFC;
+
+  --color-primary: #FE8B0C;
+  --color-primary-content: #FFFFFF;
+
+  --color-secondary: #66B2FF;
+  --color-secondary-content: #FFFFFF;
+
+  --color-accent: #66CC99;
+  --color-accent-content: #FFFFFF;
+
+  --color-neutral: #334155;
+  --color-neutral-content: #FFFFFF;
+
+  --color-info: #2094F3;
+  --color-success: #22C55E;
+  --color-warning: #FACC15;
+  --color-error: #EF4444;
+
+  --card-bg: #1C252E;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ---------------------------------- */
+/* ✅ Global Styles                   */
+/* ---------------------------------- */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-base-100);
+  font-family: "Urbanist", sans-serif;
+}
+
+.card {
+  background-color: var(--card-bg) !important;
+}
+
+.urbanist-font {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ✅ Extra Utilities */
+.bg-gradient-hero {
+  background: linear-gradient(90deg, #134a5a, #144b4b);
+}
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+.bg-gradient-pink {
+  background: linear-gradient(135deg, #ec4899, #f43f5e);
+}
+.bg-gradient-green {
+  background: linear-gradient(135deg, #10b981, #22c55e);
+}
+.bg-gradient-orange {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+}
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.6);
+}
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 0.5rem;
+}
+.glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
