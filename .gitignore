@@ -46,8 +46,6 @@ next-env.d.ts
 # 
 api
 
-ui
-
 dashboard
 login
 products
