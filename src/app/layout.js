@@ -6,8 +6,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata = {
-  title: "My App",
-  description: "Supabase Auth Demo",
+  title: "Next Shop",
+  description: "A Product Management Platfrom",
 };
 
 export default function RootLayout({ children }) {

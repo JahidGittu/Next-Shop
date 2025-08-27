@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextShop
 
-## Getting Started
+NextShop is a simple e-commerce application built with **Next.js 15 (App Router)**, **NextAuth.js**, **MongoDB**, and optional **Supabase** integration. Users can browse products, view details, and logged-in users can add new products via a protected dashboard. The application is designed for modern web development best practices, including server-client separation, API routes, and React Query for data fetching.
 
-First, run the development server:
+---
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Pages & Routes](#pages--routes)
+- [Environment Variables](#environment-variables)
+- [Setup & Installation](#setup--installation)
+- [Running the Project Locally](#running-the-project-locally)
+- [Deployment](#deployment)
+- [License](#license)
+
+---
+
+## Project Overview
+NextShop allows users to:
+- Browse a catalog of products
+- View product details
+- Log in using NextAuth (Google OAuth or credentials)
+- Add products to a protected dashboard (login required)
+- Enjoy a responsive UI with grid/list views, filtering, and sorting
+
+---
+
+## Features
+
+### Public Pages
+1. **Landing Page (`/`)**
+   - Navbar, Hero Section, Product Highlights, Footer
+   - Navigation to login & product pages
+
+2. **Login Page (`/login`)**
+   - Google OAuth login via NextAuth.js
+   - Credential-based login option
+   - Redirects to `/products` on successful login
+
+3. **Product List (`/products`)**
+   - Shows all products
+   - Filter by category, sort by name/price/newest
+   - Grid & List view toggle
+   - Search functionality
+
+4. **Product Details (`/products/[id]`)**
+   - Shows full product details
+   - Product image, price, description, reviews
+   - Add to cart, save, and share buttons
+
+### Protected Pages
+1. **Add Product (`/dashboard/add-product`)**
+   - Accessible only when logged in
+   - Form to add a new product to MongoDB
+   - Redirects unauthenticated users to `/login`
+
+### Optional Enhancements
+- Loading skeletons & spinner
+- Toast notifications on success
+- Light/Dark theme toggle with `next-themes`
+
+---
+
+## Technologies Used
+- **Next.js 15** (App Router)
+- **NextAuth.js** (Authentication)
+- **React Query** (Data fetching & caching)
+- **MongoDB** (Database)
+- **Supabase** (Optional, for alternative auth/backend)
+- **TailwindCSS + DaisyUI** (Styling & UI components)
+- **Framer Motion** (Animations)
+- **Lucide React** (Icons)
+- **Sonner** (Toasts)
+- **bcryptjs** (Password hashing)
+- **Radix UI** (UI primitives)
+- **React 19**, **Node.js**
+
+---
+
+## Pages & Routes
+
+| Route | Type | Description |
+|-------|------|-------------|
+| `/` | Public | Landing page with hero, product highlights |
+| `/login` | Public | NextAuth login page |
+| `/products` | Public | Product list with filters, sort & search |
+| `/products/[id]` | Public | Product details page |
+| `/dashboard/add-product` | Protected | Add product form (login required) |
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file in the project root with the following variables:
+
+```env
+
+# Google OAuth for NextAuth
+GOOGLE_CLIENT_ID=-----------------------------------------
+GOOGLE_CLIENT_SECRET=-------------------------------------
+
+# NextAuth configuration
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=------------------------------------------
+
+# MongoDB connection
+MONGODB_URI=----------------------------------------------
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/nextshop.git
+cd nextshop
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start development server
+```bash
+npm run dev
+```

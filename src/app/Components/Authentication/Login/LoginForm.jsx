@@ -38,7 +38,7 @@ export default function LoginForm() {
 
       toast({ title: "Success!", description: "Welcome back!" });
       // Redirect to /products after successful login
-      router.push("/dashboard");
+      router.push("/products");
     } catch (error) {
       toast({
         title: "Error",
