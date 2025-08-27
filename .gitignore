@@ -46,6 +46,5 @@ next-env.d.ts
 # 
 api
 
-dashboard
 products
 routes
