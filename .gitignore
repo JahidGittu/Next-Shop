@@ -46,7 +46,6 @@ next-env.d.ts
 # 
 api
 Authentication
-Home
 ui
 Context
 dashboard
