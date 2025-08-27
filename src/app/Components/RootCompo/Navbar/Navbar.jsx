@@ -40,7 +40,7 @@ export default function Navbar() {
       setIsProfileOpen(false);
       setIsOpen(false);
     } catch (err) {
-      console.error(err);
+      // console.error(err);
     }
   };
 

@@ -1,6 +1,10 @@
 // src/app/api/products/[id]/route.js
+
+export const dynamic = "force-dynamic";
+
 import clientPromise from "../../../../lib/mongodb";
 import { ObjectId } from "mongodb";
+
 
 export async function GET(req) {
   try {

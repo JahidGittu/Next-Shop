@@ -67,7 +67,7 @@ export default function DashboardContent() {
         const data = await res.json();
         return Array.isArray(data) ? data : [];
       } catch (err) {
-        console.error("Error fetching products:", err);
+        // console.error("Error fetching products:", err);
         return [];
       }
     },

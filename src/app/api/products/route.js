@@ -1,4 +1,7 @@
 // src/app/api/products/route.js
+
+export const dynamic = "force-dynamic";
+
 import clientPromise from "../../../lib/mongodb";
 import { ObjectId } from "mongodb";
 

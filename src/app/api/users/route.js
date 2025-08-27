@@ -3,6 +3,8 @@
 import clientPromise from "../../../lib/mongodb";
 import { ObjectId } from "mongodb";
 
+export const dynamic = "force-dynamic";
+
 import bcrypt from "bcryptjs";
 
 export async function POST(req) {
